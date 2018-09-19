@@ -185,6 +185,9 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mata
 # Root
 BOARD_ROOT_EXTRA_FOLDERS := bt_firmware dsp firmware persist
 
+# RIL
+TARGET_USES_OLD_MNC_FORMAT := true
+
 # Security Patch Level
 VENDOR_SECURITY_PATCH := 2019-04-05
 
