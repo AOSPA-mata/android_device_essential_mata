@@ -301,6 +301,7 @@ on post-fs-data
     start vendor.ipacm
     start vendor.qti
     start vendor.netmgrd
+    start ril-daemon
 
     chown system system /sys/devices/soc/soc:fpc,fpc1020/irq
     chown system system /sys/devices/soc/soc:fpc,fpc1020/wakeup_enable
