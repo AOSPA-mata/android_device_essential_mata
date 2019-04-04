@@ -144,22 +144,23 @@ TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 # IPA
 USE_DEVICE_SPECIFIC_DATA_IPA_CFG_MGR := true
 
-# Kernel
+# Ramdisk
 BOARD_KERNEL_CMDLINE := androidboot.hardware=mata user_debug=31 ehci-hcd.park=3
-BOARD_KERNEL_CMDLINE += service_locator.enable=1
-BOARD_KERNEL_CMDLINE += swiotlb=2048 androidboot.configfs=true
+BOARD_KERNEL_CMDLINE += service_locator.enable=1 swiotlb=2048 androidboot.configfs=true
 BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a800000.dwc3 cma=32M@0-0xffffffff
+BOARD_KERNEL_CMDLINE += sched_enable_hmp=1 sched_enable_power_aware=1
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x02000000
 BOARD_RAMDISK_OFFSET := 0x02200000
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+
+# Kernel
 TARGET_KERNEL_SOURCE := kernel/essential/msm8998
 TARGET_KERNEL_CONFIG := mata_defconfig
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_KERNEL_CLANG_VERSION := 9.0.1
-export CROSS_COMPILE_ARM32 = prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-
 
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
