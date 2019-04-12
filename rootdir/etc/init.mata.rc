@@ -195,6 +195,10 @@ on post-fs-data
     # Nfc
     mkdir /data/vendor/nfc 0770 nfc nfc
 
+    #Create directory from IMS services
+    mkdir /data/shared 0755
+    chown system system /data/shared
+
     # msm specific files that need to be created on /data
     mkdir /data/vendor/misc 01771 system system
 
@@ -738,13 +742,6 @@ service vendor.loc_launcher /vendor/bin/loc_launcher
     # loc_launcher will start as root and set its uid to gps
     class late_start
     group gps inet diag wifi
-    writepid /dev/cpuset/system-background/tasks
-
-service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.conf
-    socket msm_irqbalance seqpacket 660 root system
-    class core
-    user root
-    group root
     writepid /dev/cpuset/system-background/tasks
 
 service vendor.netmgrd /vendor/bin/netmgrd
