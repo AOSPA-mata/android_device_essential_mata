@@ -256,6 +256,9 @@ PRODUCT_PACKAGES += \
     libOmxVenc \
     libstagefrighthw
 
+# Performance
+include vendor/qcom/common/qti-vendor.mk
+
 # Permissions
 PRODUCT_COPY_FILES += \
     device/essential/mata/configs/privapp-permissions-mata.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/privapp-permissions-mata.xml \

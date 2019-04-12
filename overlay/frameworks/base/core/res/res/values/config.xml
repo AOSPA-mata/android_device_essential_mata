@@ -345,6 +345,7 @@
 
     <!-- Default list of files pinned by the Pinner Service -->
     <string-array translatable="false" name="config_defaultPinnerServiceFiles">
+        <!-- Standard important stuff-->
         <item>"/system/framework/arm64/boot-framework.oat"</item>
         <item>"/system/framework/boot-framework.vdex"</item>
         <item>"/system/framework/oat/arm64/services.odex"</item>
@@ -353,6 +354,18 @@
         <item>"/system/framework/boot.vdex"</item>
         <item>"/system/framework/arm64/boot-core-libart.oat"</item>
         <item>"/system/framework/boot-core-libart.vdex"</item>
+        <!-- QCOM performance stack -->
+        <item>"/system/framework/arm64/boot-QPerformance.oat"</item>
+        <item>"/system/framework/arm64/boot-UxPerformance.oat"</item>
+        <!-- Critical libraries -->
+        <item>"/system/lib64/libsurfaceflinger.so"</item>
+        <item>"/system/lib64/libRScpp.so"</item>
+        <item>"/system/lib64/libRS.so"</item>
+        <item>"/system/lib64/libRS_internal.so"</item>
+        <item>"/system/lib64/libbcinfo.so"</item>
+        <item>"/system/lib64/libRSDriver.so"</item>
+        <item>"/system/lib64/libRSCpuRef.so"</item>
+        <item>"/system/lib64/libblas.so"</item>
     </string-array>
 
     <!-- True if camera app should be pinned via Pinner Service -->
