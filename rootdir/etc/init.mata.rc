@@ -192,6 +192,9 @@ on late-fs
     mount_all /vendor/etc/fstab.mata --late
 
 on post-fs-data
+    # Nfc
+    mkdir /data/vendor/nfc 0770 nfc nfc
+
     # msm specific files that need to be created on /data
     mkdir /data/vendor/misc 01771 system system
 

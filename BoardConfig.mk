@@ -135,19 +135,8 @@ DEVICE_MATRIX_FILE := $(DEVICE_PATH)/compatibility_matrix.xml
 TARGET_FS_CONFIG_GEN := $(DEVICE_PATH)/config.fs
 
 # NFC
-BOARD_NFC_CHIPSET := pn553
+BOARD_NFC_CHIPSET := pn548ad
 TARGET_USES_NQ_NFC := true
-
-# Ramdisk
-BOARD_KERNEL_CMDLINE := androidboot.hardware=mata user_debug=31 ehci-hcd.park=3
-BOARD_KERNEL_CMDLINE += service_locator.enable=1 swiotlb=2048 androidboot.configfs=true
-BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a800000.dwc3 cma=32M@0-0xffffffff
-BOARD_KERNEL_CMDLINE += sched_enable_hmp=1 sched_enable_power_aware=1
-BOARD_KERNEL_BASE := 0x00000000
-BOARD_KERNEL_PAGESIZE := 4096
-BOARD_KERNEL_TAGS_OFFSET := 0x02000000
-BOARD_RAMDISK_OFFSET := 0x02200000
-BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 
 # Kernel
 TARGET_KERNEL_SOURCE := kernel/essential/msm8998
@@ -176,6 +165,17 @@ BOARD_SUPPRESS_SECURE_ERASE := true
 
 # Power
 TARGET_USES_INTERACTION_BOOST := true
+
+# Ramdisk
+BOARD_KERNEL_CMDLINE := androidboot.hardware=mata user_debug=31 ehci-hcd.park=3
+BOARD_KERNEL_CMDLINE += service_locator.enable=1 swiotlb=2048 androidboot.configfs=true
+BOARD_KERNEL_CMDLINE += androidboot.usbcontroller=a800000.dwc3 cma=32M@0-0xffffffff
+BOARD_KERNEL_CMDLINE += sched_enable_hmp=1 sched_enable_power_aware=1
+BOARD_KERNEL_BASE := 0x00000000
+BOARD_KERNEL_PAGESIZE := 4096
+BOARD_KERNEL_TAGS_OFFSET := 0x02000000
+BOARD_RAMDISK_OFFSET := 0x02200000
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 
 # Recovery
 TARGET_RECOVERY_UI_MARGIN_WIDTH := 64

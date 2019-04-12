@@ -67,6 +67,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qcom.hdr.config=/vendor/etc/hdr_tm_config.xml
 
+# NFC
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.nfc_nci=nqx.default \
+    ro.nfc.port=I2C \
+    persist.nfc.smartcard.config=SIM1,eSE1
+
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.cne.feature=1 \
