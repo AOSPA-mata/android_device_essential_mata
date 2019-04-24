@@ -2,38 +2,6 @@
 # vendor props for mata
 #
 
-
-# Audio
-PRODUCT_PROPERTY_OVERRIDES += \
-    af.fast_track_multiplier=1 \
-    persist.vendor.audio.fluence.speaker=true \
-    persist.vendor.audio.fluence.voicecall=true \
-    persist.vendor.audio.fluence.voicerec=false \
-    persist.vendor.audio.hw.binder.size_kbyte=1024 \
-    persist.vendor.audio.ras.enabled=false \
-    ro.vendor.audio.sdk.fluencetype=fluencepro \
-    ro.vendor.audio.sdk.ssr=false \
-    vendor.audio_hal.period_size=192 \
-    vendor.audio.dolby.ds2.enabled=false \
-    vendor.audio.dolby.ds2.hardbypass=false \
-    vendor.audio.flac.sw.decoder.24bit=true \
-    vendor.audio.hw.aac.encoder=true \
-    vendor.audio.noisy.broadcast.delay=600 \
-    vendor.audio.offload.buffer.size.kb=32 \
-    vendor.audio.offload.gapless.enabled=true \
-    vendor.audio.offload.multiaac.enable=true \
-    vendor.audio.offload.multiple.enabled=false \
-    vendor.audio.offload.passthrough=false \
-    vendor.audio.offload.pstimeout.secs=3 \
-    vendor.audio.offload.track.enable=true \
-    vendor.audio.parser.ip.buffer.size=262144 \
-    vendor.audio.safx.pbe.enabled=true \
-    vendor.audio.tunnel.encode=false \
-    vendor.audio.use.sw.alac.decoder=true \
-    vendor.audio.use.sw.ape.decoder=true \
-    vendor.fm.a2dp.conc.disabled=true \
-    vendor.voice.path.for.pcm.voip=true
-
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.bt.a2dp_offload_cap=sbc-aptx-aptxhd-aac \
@@ -67,12 +35,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # HDR
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qcom.hdr.config=/vendor/etc/hdr_tm_config.xml
-
-# NFC
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hardware.nfc_nci=nqx.default \
-    ro.nfc.port=I2C \
-    persist.nfc.smartcard.config=SIM1,eSE1
 
 # Radio
 PRODUCT_PROPERTY_OVERRIDES += \

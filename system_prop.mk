@@ -2,12 +2,6 @@
 # system props for mata
 #
 
-
-# Audio
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
-    audio.deep_buffer.media=true \
-    audio.offload.video=true
-
 # Camera
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     vendor.camera.aux.packagelist="org.codeaurora.snapcam,com.essential.klik,org.lineageos.snap"
@@ -20,6 +14,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     dalvik.vm.heaptargetutilization=0.75 \
     dalvik.vm.heapminfree=512k \
     dalvik.vm.heapmaxfree=8m
+
+# Touchscreen
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    persist.vendor.qti.inputopts.enable=true
+    persist.vendor.qti.inputopts.movetouchslop=0.5
 
 # Voice assistant
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
